@@ -46,7 +46,7 @@ function App() {
         <Route path="/myorders" element={<MyOrders />} />
 
         <Route path="/order/:id" element={<OrderDetails />} />
-
+        <Route path="/shipping" element={<Shipping />} />
 
 
 
