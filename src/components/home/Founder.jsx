@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import me from "../../assets/skj.jpg";
+import me from "../../assets/dogechef.jpeg";
 const Founder = () => {
   const options = {
     initial: {
@@ -17,12 +17,10 @@ const Founder = () => {
     <section className="founder">
       <motion.div {...options}>
         <img src={me} alt="Founder" height={200} width={200} />
-        <h3>Nelson</h3>
-
+        <h3>Doge</h3>
         <p>
-          Hey, Everyone I am Nelson, the founder of Burger Shop.
-          <br />
-          Our aim is to create the most tasty burger on planet.
+          I am Doge, the founder of Doge Shop. Affiliated to
+          Doge Taste...
         </p>
       </motion.div>
     </section>

@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { RiFindReplaceLine } from "react-icons/ri";
-import me from "../../assets/skj.jpg";
+import me from "../../assets/dogechef.jpeg";
 const About = () => {
     return (
         <section className="about">
             <main>
                 <h1>About Us</h1>
                 <article>
-                    <h4>Burger Shop</h4>
+                    <h4>Doge Shop</h4>
                     <p>
-                        This is Burger Shop. The place for most tasty burgers on the
+                        This is Doge Shop. The place for most tasty burgers on the
                         enitre earth.
                     </p>
                     <p>
@@ -22,15 +22,14 @@ const About = () => {
                     </Link>
                 </article>
                 <div>
-                    <h2>Founder</h2>
                     <article>
                         <div>
                             <img src={me} alt="Founder" />
-                            <h3>Nelson</h3>
+                            <h3>Doge</h3>
                         </div>
                         <p>
-                            I am Nelson, the founder of Burger Shop. Affiliated to
-                            God Taste...
+                            I am Doge, the founder of Burger Shop. Affiliated to
+                            Doge Taste...
                         </p>
                     </article>
                 </div>

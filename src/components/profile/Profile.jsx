@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import me from "../../assets/skj.jpg";
+import me from "../../assets/dogechef.jpeg";
 import { Link } from "react-router-dom";
 import { MdDashboard } from "react-icons/md";
 
@@ -20,9 +20,9 @@ const Profile = () => {
       <main>
         <motion.img src={me} alt="User" {...options} />
         <motion.h5 {...options} transition={{ delay: 0.3 }}>
-          Nelson
+          Doge
         </motion.h5>
-      
+
         <motion.div
           initial={{
             x: "-100vw",
