@@ -47,9 +47,6 @@ function App() {
 
         <Route path="/order/:id" element={<OrderDetails />} />
         <Route path="/shipping" element={<Shipping />} />
-
-
-
       </Routes>
 
       <Footer />

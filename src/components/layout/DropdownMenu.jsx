@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-function DropdownMenu() {
+function DropdownMenu({ isAuthenticated = false }) {
   const [navLinks, setNavLinks] = useState([]);
 
   useEffect(() => {
@@ -32,15 +32,23 @@ function DropdownMenu() {
               Menu
             </button>
             <ul className="dropdown-menu dropdown-menu-end">
-              {navLinks.map((d, i) => (
-                <li key={i}>
-                  <Link to={d.path}>
-                    <button className="dropdown-item" type="button">
-                      {d.name}
-                    </button>
-                  </Link>
-                </li>
-              ))}
+              {navLinks.map((d, i) => {
+                if (d.name === 'Login' && isAuthenticated) {
+                  return null
+                }
+                if (d.name === 'Logout' && !isAuthenticated) {
+                  return null
+                }
+                return (
+                  <li key={i}>
+                    <Link to={d.path}>
+                      <button className="dropdown-item" type="button">
+                        {d.name}
+                      </button>
+                    </Link>
+                  </li>
+                )
+              })}
             </ul>
           </div>
         </div>

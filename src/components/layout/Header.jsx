@@ -7,19 +7,23 @@ import { motion } from "framer-motion";
 import DropdownMenu from './DropdownMenu';
 
 const Header = ({ isAuthenticated = false }) => {
+
+    console.log(isAuthenticated)
     return (
         <nav>
             <motion.div initial={{ x: "-100%" }} whileInView={{ x: 0 }}>
-                <IoFastFoodOutline />
+                <Link to='/'><IoFastFoodOutline /></Link>
             </motion.div>
             <div>
                 <Link to="/">Home</Link>
                 <Link to="/contact">Contact</Link>
                 <Link to="/about">About</Link>
-                <Link to="/cart">
-                    <FiShoppingCart />
-                </Link>
-                <DropdownMenu />
+                {isAuthenticated &&
+                    <Link to="/cart">
+                        <FiShoppingCart />
+                    </Link>
+                }
+                <DropdownMenu isAuthenticated={isAuthenticated} />
             </div>
         </nav>
     );
