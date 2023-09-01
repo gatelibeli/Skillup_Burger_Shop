@@ -27,12 +27,15 @@ const Cart = () => {
 
   const increment = (foodItem, incrementBy) => {
     setQuantity(() => {
-      const sum = quantity[foodItem] + incrementBy
+      let sum = quantity[foodItem] + incrementBy
+      sum = sum >= 0 ? sum : 0
       return { ...quantity, [foodItem]: sum }
     })
   };
 
   const decrement = (value, decrementBy) => { increment(value, -decrementBy) };
+
+  const total = quantity.burger1 * 10 + quantity.burger2 * 15 + quantity.burger3 * 18
 
   return (
     <section className="cart">
@@ -65,19 +68,19 @@ const Cart = () => {
         <article>
           <div>
             <h4>Sub Total</h4>
-            <p>€{2000}</p>
+            <p>€{(total * 0.82).toFixed(2)}</p>
           </div>
           <div>
             <h4>Tax</h4>
-            <p>€{2000 * 0.18}</p>
+            <p>€{(total * 0.18).toFixed(2)}</p>
           </div>
           <div>
             <h4>Shipping Charges</h4>
-            <p>€{200}</p>
+            <p>€{total ? 2.50 : 0}</p>
           </div>
           <div>
             <h4>Total</h4>
-            <p>€{2000 + 2000 * 0.18 + 200}</p>
+            <p>€{total ? total + 2.50 : total}</p>
           </div>
           <Link to="/shipping">Checkout</Link>
         </article>

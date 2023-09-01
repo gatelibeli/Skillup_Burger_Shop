@@ -28,7 +28,7 @@ const About = () => {
                             <h3>Doge</h3>
                         </div>
                         <p>
-                            I am Doge, the founder of Burger Shop. Affiliated to
+                            I am Doge, the founder of Doge Shop. Affiliated to
                             Doge Taste...
                         </p>
                     </article>
