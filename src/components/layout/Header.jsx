@@ -7,8 +7,6 @@ import { motion } from "framer-motion";
 import DropdownMenu from './DropdownMenu';
 
 const Header = ({ isAuthenticated = false }) => {
-
-    console.log(isAuthenticated)
     return (
         <nav>
             <motion.div initial={{ x: "-100%" }} whileInView={{ x: 0 }}>

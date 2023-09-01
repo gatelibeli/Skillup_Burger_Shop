@@ -26,7 +26,7 @@ const Contact = () => {
                     <div style={{
                         color: "red", transform: 'translate(25%,-700%)',
                         backgroundColor: '#fff', padding: '10px', borderRadius: '5px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)'
-                    }}>Thank you for cotacting us! We will get back to you shortly.</div>
+                    }}>Thank you for contacting us! We will get back to you shortly.</div>
                 </Popup>
             </motion.form>
             <motion.div
